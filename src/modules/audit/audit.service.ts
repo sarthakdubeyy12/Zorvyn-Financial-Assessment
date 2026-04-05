@@ -32,16 +32,14 @@ class AuditService {
           userId: input.userId,
           action: input.action,
           entity: input.entity,
-          entityId: input.entityId ?? null,
-          previousValue: input.previousValue ?? null,
-          newValue: input.newValue ?? null,
-          ipAddress: input.ipAddress ?? null,
-          userAgent: input.userAgent ?? null,
+          entityId: input.entityId ?? undefined,
+          previousValue: input.previousValue ?? undefined,
+          newValue: input.newValue ?? undefined,
+          ipAddress: input.ipAddress ?? undefined,
+          userAgent: input.userAgent ?? undefined,
         },
       });
     } catch (err) {
-      // Audit failure must never crash the main operation
-      // In production this would push to a dead letter queue
       console.error("[AuditService] Failed to write audit log:", err);
     }
   }

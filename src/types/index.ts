@@ -177,8 +177,8 @@ export interface CreateAuditInput {
   action: AuditAction;
   entity: string;
   entityId?: string;
-  previousValue?: Record<string, unknown>;
-  newValue?: Record<string, unknown>;
+  previousValue?: Record<string, any>;
+  newValue?: Record<string, any>;
   ipAddress?: string;
   userAgent?: string;
 }

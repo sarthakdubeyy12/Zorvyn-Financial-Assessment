@@ -208,11 +208,11 @@ class AuthService {
 
     const accessToken = jwt.sign(accessPayload, secret, {
       expiresIn: process.env.JWT_ACCESS_EXPIRES ?? "15m",
-    });
+    } as jwt.SignOptions);
 
     const refreshToken = jwt.sign(refreshPayload, secret, {
       expiresIn: process.env.JWT_REFRESH_EXPIRES ?? "7d",
-    });
+    } as jwt.SignOptions);
 
     return { accessToken, refreshToken };
   }

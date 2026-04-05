@@ -131,13 +131,16 @@ export function globalErrorHandler(
 ): void {
   // Known operational error — respond with its details
   if (err instanceof AppError) {
+    const errorResponse: Record<string, unknown> = {
+      code: err.code,
+      message: err.message,
+    };
+    if (err.details) {
+      errorResponse.details = err.details;
+    }
     res.status(err.statusCode).json({
       success: false,
-      error: {
-        code: err.code,
-        message: err.message,
-        ...(err.details && { details: err.details }),
-      },
+      error: errorResponse,
     });
     return;
   }

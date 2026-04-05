@@ -53,6 +53,25 @@ app.use(morgan(process.env.NODE_ENV === "production" ? "combined" : "dev"));
 // Returns 200 if the server is up and DB is reachable
 // ─────────────────────────────────────────
 
+app.get("/", (_req, res) => {
+  res.status(200).json({
+    success: true,
+    data: {
+      name: "Zorvyn Finance API",
+      version: process.env.npm_package_version ?? "1.0.0",
+      endpoints: {
+        health: "/health",
+        docs: "/api/docs",
+        auth: "/api/auth",
+        users: "/api/users",
+        records: "/api/records",
+        dashboard: "/api/dashboard",
+        audit: "/api/audit",
+      },
+    },
+  });
+});
+
 app.get("/health", async (_req, res) => {
   res.status(200).json({
     success: true,
@@ -73,29 +92,6 @@ app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
   customSiteTitle: "Zorvyn Finance API",
   customCss: ".swagger-ui .topbar { display: none }",
 }));
-
-// ─────────────────────────────────────────
-// ROOT — Welcome / API index
-// ─────────────────────────────────────────
-
-app.get("/", (_req, res) => {
-  res.status(200).json({
-    success: true,
-    data: {
-      name: "Zorvyn Finance API",
-      version: process.env.npm_package_version ?? "1.0.0",
-      documentation: "/api/docs",
-      health: "/health",
-      endpoints: {
-        auth: "/api/auth",
-        users: "/api/users",
-        records: "/api/records",
-        dashboard: "/api/dashboard",
-        audit: "/api/audit",
-      },
-    },
-  });
-});
 
 // ─────────────────────────────────────────
 // ROUTES
