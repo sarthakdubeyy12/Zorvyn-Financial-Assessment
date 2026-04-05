@@ -45,6 +45,10 @@ All responses follow a consistent shape:
     },
     servers: [
       {
+        url: "https://zorvyn-financial-assessment-production.up.railway.app",
+        description: "Live production server (Railway)",
+      },
+      {
         url: "http://localhost:3000",
         description: "Local development server",
       },
