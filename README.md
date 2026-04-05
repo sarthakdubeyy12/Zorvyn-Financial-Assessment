@@ -4,6 +4,19 @@
 
 ---
 
+## 🔗 Live Deployment
+
+| | URL |
+|---|---|
+| **Live API** | https://zorvyn-financial-assessment-production.up.railway.app |
+| **Swagger Docs** | https://zorvyn-financial-assessment-production.up.railway.app/api/docs |
+| **Health Check** | https://zorvyn-financial-assessment-production.up.railway.app/health |
+| **GitHub** | https://github.com/sarthakdubeyy12/Zorvyn-Financial-Assessment |
+
+> The API is live and fully functional. Seeded test credentials are available below under [Getting Started](#getting-started).
+
+---
+
 ## Table of Contents
 
 1. [Overview](#overview)
