@@ -503,7 +503,3 @@ Given more time, the next priorities would be:
 
 ---
 
-
-
-*Sarthak Dubey — dubeysarthak47@gmail.com*
-*Built for Zorvyn Backend Developer Intern Assessment*
