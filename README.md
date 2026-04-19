@@ -1,4 +1,3 @@
-# Zorvyn Financial Assessment
 ### Finance Data Processing and Access Control Backend
 **Submitted by:** Sarthak Dubey — dubeysarthak47@gmail.com
 
@@ -504,15 +503,7 @@ Given more time, the next priorities would be:
 
 ---
 
-## Summary
 
-This backend was built with one principle in mind: **financial data deserves financial-grade thinking.**
-
-That means type-safe money arithmetic, immutable audit trails, declarative permissions, soft deletes, and APIs that return business insights — not just database rows.
-
-Every decision in this codebase has a reason. Every tradeoff is documented. The goal was not to build the most feature-rich submission, but the most **thoughtful** one.
-
----
 
 *Sarthak Dubey — dubeysarthak47@gmail.com*
 *Built for Zorvyn Backend Developer Intern Assessment*
